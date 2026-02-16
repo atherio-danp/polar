@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const SITE_URL = "https://polar.codewrinkles.com";
@@ -115,6 +116,7 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-950 text-slate-100 antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
